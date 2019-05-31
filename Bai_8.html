@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <button type="button" onclick="Play();">Chơi</button>
+</head>
+<body>
+<script>
+    function Play() {
+        var score=3;
+        while (score!=0) {
+        var Khoang=prompt('Mời nhập khoảng giới hạn từ 0 đến ');
+        var valueRandom=Math.floor(Math.random()*Khoang);
+        var valueSelect=prompt('Mời bạn nhập giá trị ');
+        if (valueRandom==valueSelect)
+        {
+            alert('You win');
+            break;
+        }
+        else
+        {
+            alert('You lose Computer select value '+valueRandom);
+        }
+        score--;
+        if(score==0)
+        {
+            alert('You lose');
+        }
+        else
+            {
+                alert('Bạn còn '+score+' lượt');
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>

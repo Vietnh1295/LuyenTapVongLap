@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function SoChiaHetChobay(N)
+    {
+            if(N!=0)
+            {
+                if(N%7==0)
+                {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+    }
+    function TongSoChiaHetChoBay() {
+        var count=0;
+        var sum=0;
+        var i=1;
+        var value='';
+        while (count!=30)
+        {
+
+            if(SoChiaHetChobay(i))
+            {
+                value+=' '+i+' ';
+                sum+=i;
+                count++;
+            }
+            i++;
+
+        }
+        return value+'bằng '+sum;
+    }
+
+    alert('Tổng 30 số chia hết cho 7 là '+TongSoChiaHetChoBay());
+</script>
+</body>
+</html>

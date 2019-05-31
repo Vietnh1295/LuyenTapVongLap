@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var fibonacci_seri=function (n) {
+    if(n==1)
+    {
+        return [0,1];
+    }
+    else
+        {
+            var s=fibonacci_seri(n-1);
+            s.push(s[s.length-1]+s[s.length-2]);
+            return s;
+        }
+}
+var num=0;
+num=prompt('Nhập số lương phần tử trong filbonacci');
+while(num<1){
+    alert('Mời nhập lại');
+    num=prompt('Nhập số lương phần tử trong filbonacci');
+}
+alert(TínhTong());
+function TínhTong() {
+var sum=0;
+    for(var i=0;i<fibonacci_seri(num).length;i++)
+    {
+        sum+= fibonacci_seri(num)[i];
+    }
+    return ('Tổng của chuỗi fibonacci '+fibonacci_seri(num)+' là '+ sum);
+}
+function KiemTraChiaHetChoNam(N) {
+    if(N!=0){ if(N%5==0)
+    {
+        alert('Số chia hết cho năm là ' + N);
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+
+}
+function SoChiaHetChoNamDauTien() {
+    var count=0;
+    var NUMB=1;
+    while (count!==1)
+    {
+        for(var i=0;i<fibonacci_seri(NUMB).length;i++)
+        {
+            if(KiemTraChiaHetChoNam(fibonacci_seri(NUMB)[i]))
+            {
+                count++;
+                break;
+            }
+        }
+        NUMB++;
+    }
+    return 'Hoàn thành';
+}
+alert(SoChiaHetChoNamDauTien());
+
+</script>
+</body>
+</html>
